@@ -1,4 +1,5 @@
-module.exports = {
+export default {
+  content: ['src/views/**/*.njk'],
   theme: {
     extend: {}
   },

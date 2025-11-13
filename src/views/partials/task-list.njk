@@ -1,0 +1,8 @@
+{% if tasks.length == 0 %}
+  <div class="text-gray-500 italic">No tasks yet. Add one above!</div>
+{% else %}
+  {% for task in tasks %}
+    {% include 'partials/task-row.njk' %}
+  {% endfor %}
+{% endif %}
+

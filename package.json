@@ -2,47 +2,19 @@
   "name": "express-nunjucks-tailwind",
   "private": true,
   "version": "1.0.0",
+  "type": "module",
   "description": "A starter project with Express, Nunjucks and TailwindCSS",
-  "main": "bin/start.js",
   "scripts": {
-    "test": "xo",
-    "lint": "xo",
-    "format": "xo --fix",
-    "prestart": "yarn build",
-    "start": "node ./bin/start.js",
-    "predev": "yarn tw",
-    "dev": "nodemon ./bin/start.js",
-    "tw": "tailwind build src/styles/app.css -o public/app.css",
-    "purge": "purgecss -c purgecss.config.js -o ./public",
-    "build": "yarn tw && yarn purge"
+    "dev": "node --watch src/server.js"
   },
-  "keywords": [
-    "express",
-    "nunjucks",
-    "tailwindcss"
-  ],
-  "author": "Hugo Di Francesco",
-  "license": "MIT",
   "dependencies": {
-    "axios": "^0.21.1",
-    "client-sessions": "^0.8.0",
-    "express": "^4.17.1",
-    "helmet": "^4.6.0",
-    "morgan": "^1.10.0",
-    "nunjucks": "^3.2.3"
+    "express": "4.18.2",
+    "nunjucks": "3.2.3"
   },
   "devDependencies": {
-    "nodemon": "^2.0.12",
-    "purgecss": "^4.0.3",
-    "tailwindcss": "^1.9",
-    "xo": "^0.39.1"
-  },
-  "xo": {
-    "prettier": true,
-    "space": true,
-    "rules": {}
-  },
-  "nodemonConfig": {
-    "ext": "js,html"
+    "@trivago/prettier-plugin-sort-imports": "6.0.0",
+    "prettier": "3.2.5",
+    "prettier-plugin-tailwindcss": "0.7.1",
+    "tailwindcss": "3.4.18"
   }
 }

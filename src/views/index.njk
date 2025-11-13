@@ -1,0 +1,37 @@
+
+{% extends "layout.njk" %}
+
+{% block content %}
+ <h1 class="text-3xl font-bold mb-6">TO-DO LIST</h1>
+
+          <!-- Add Task Form -->
+          <form
+            hx-post="/tasks"
+            hx-swap="none"
+            hx-on::after-request="if(event.detail.successful) this.reset()"
+            class="mb-6"
+          >
+            <div class="flex gap-2">
+              <input
+                type="text"
+                name="title"
+                placeholder="Enter task title..."
+                required
+                class="flex-1 px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+              <button
+                type="submit"
+                class="px-6 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded transition-colors"
+              >
+                Add
+              </button>
+            </div>
+          </form>
+
+          <!-- Task List -->
+          <div id="task-list">
+            {% include 'partials/task-list.njk' %}
+          </div>
+</section>
+{% endblock %}
+

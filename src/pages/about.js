@@ -1,3 +1,3 @@
 module.exports = async function (request, response) {
-  return response.render('about.html');
+  return response.render('about.njk');
 };
