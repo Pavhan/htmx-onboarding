@@ -8,7 +8,7 @@ export const getIndex = (req, res) => {
   const tasks = taskService.getAllTasks();
   const stats = taskService.getTaskStats();
 
-  res.render('index', {
+  res.render('home.njk', {
     tasks,
     stats,
   });

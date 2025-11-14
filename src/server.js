@@ -18,6 +18,8 @@ nunjucks.configure(viewsPath, {
   throwOnUndefined: false,
   trimBlocks: true,
   lstripBlocks: true,
+  watch: true, // Enable watching for template changes
+  noCache: true, // Disable caching in development
 });
 
 // Middleware

@@ -1,8 +1,8 @@
-{% set borderClass = 'border-green-500 bg-green-50' if task.completed else 'border-blue-500 bg-blue-50' %}
-{% set textClass = 'line-through text-gray-500' if task.completed else '' %}
-{% set buttonText = 'Undo' if task.completed else 'Done' %}
-{% set buttonClass = 'bg-yellow-500 hover:bg-yellow-600' if task.completed else 'bg-green-500 hover:bg-green-600' %}
-<div id="task-{{ task.id }}" class="flex items-center gap-3 p-3 border-2 rounded {{ borderClass }} mb-2">
+{% set borderClass = 'border-green-600 bg-green-50' if task.completed else 'border-blue-600 bg-blue-50' %} {% set
+textClass = 'line-through text-gray-500' if task.completed else '' %} {% set buttonText = 'Undo' if task.completed else
+'Done' %} {% set buttonClass = 'bg-green-500 hover:bg-green-600' if task.completed else 'bg-blue-500 hover:bg-blue-600'
+%}
+<div id="task-{{ task.id }}" class="flex items-center gap-3 p-3 border-2 rounded-lg {{ borderClass }} mb-2">
   <span class="flex-1 {{ textClass }}">{{ task.title }}</span>
   <button
     hx-post="/tasks/{{ task.id }}/toggle"
@@ -17,9 +17,8 @@
     hx-delete="/tasks/{{ task.id }}"
     hx-target="#task-list"
     hx-swap="outerHTML"
-    class="px-4 py-1 bg-red-500 hover:bg-red-600 text-white rounded transition-colors"
+    class="rounded bg-red-500 px-4 py-1 text-white transition-colors hover:bg-red-600"
   >
     Delete
   </button>
 </div>
-

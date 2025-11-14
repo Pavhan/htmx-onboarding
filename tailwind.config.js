@@ -1,8 +1,8 @@
 export default {
   content: ['src/views/**/*.njk'],
   theme: {
-    extend: {}
+    extend: {},
   },
   variants: {},
-  plugins: []
+  plugins: [],
 };

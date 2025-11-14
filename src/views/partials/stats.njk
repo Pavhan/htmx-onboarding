@@ -1,24 +1,25 @@
-<div id="stats-card" class="bg-white p-6 rounded shadow-md">
-  <h2 class="text-xl font-bold mb-4">Task Statistics</h2>
+<div id="stats-card" class="rounded-lg bg-white p-6 shadow-md">
+  <h2 class="mb-4 text-xl font-bold">Task Statistics</h2>
   <div class="space-y-2">
     <div class="flex justify-between">
       <span class="font-semibold">Done:</span>
-      <span class="text-green-600">{{ stats.done }}</span>
+      <span class="flex size-8 items-center justify-center rounded-full bg-green-600 text-white">{{ stats.done }}</span>
     </div>
     <div class="flex justify-between">
       <span class="font-semibold">Not Done:</span>
-      <span class="text-blue-600">{{ stats.notDone }}</span>
+      <span class="flex size-8 items-center justify-center rounded-full bg-blue-600 text-white"
+        >{{ stats.notDone }}</span
+      >
     </div>
-    <div class="flex justify-between border-t border-gray-300 pt-2 mt-2">
+    <div class="mt-2 flex justify-between border-t border-gray-300 pt-2">
       <span class="font-bold">Total:</span>
-      <span class="font-bold">{{ stats.total }}</span>
+      <span class="flex size-8 items-center justify-center font-bold">{{ stats.total }}</span>
     </div>
   </div>
   <button
     onclick="openModal()"
-    class="mt-4 w-full px-4 py-2 bg-purple-500 hover:bg-purple-600 text-white rounded transition-colors"
+    class="mt-4 w-full rounded bg-purple-500 px-4 py-2 text-white transition-colors hover:bg-purple-600"
   >
     Open tasks in modal
   </button>
 </div>
-
